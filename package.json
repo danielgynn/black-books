@@ -4,10 +4,13 @@
   "private": true,
   "author": "@danielgynn",
   "scripts": {
-    "start": "nodemon server/index.js"
+    "start": "nodemon server/index.js",
+    "build": "cd client && yarn run build",
+    "test": "cd client && yarn run test"
   },
   "dependencies": {
     "body-parser": "^1.17.2",
-    "express": "^4.15.3"
+    "express": "^4.15.3",
+    "mongoose": "^4.10.6"
   }
 }
