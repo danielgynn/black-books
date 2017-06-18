@@ -5,6 +5,7 @@ var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 var goodreads = require('goodreads');
 var request = require('request');
+var xmlParser = require('xml2json');
 
 var app = express();
 var router = express.Router();
@@ -33,7 +34,8 @@ router.get('/library', function (req, res) {
   var url = 'https://www.goodreads.com/author/show/18541?format=xml&key=xidaoByhpk29l7mQcbxEIQ';
 
   request(url, function(err, response, body) {
-    res.json(body);
+    var data = xmlParser.toJson(body);
+    res.json(data);
   });
 });
 
