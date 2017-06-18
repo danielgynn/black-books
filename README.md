@@ -1,3 +1,7 @@
+# Black Books
+
+[![Build Status](https://travis-ci.org/danielgynn/black-books.svg?branch=master)](https://travis-ci.org/danielgynn/black-books)
+
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
 Below you will find some information on how to perform common tasks.<br>
