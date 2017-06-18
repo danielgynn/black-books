@@ -7,17 +7,33 @@ body {
   color: #f3f4f4;
 }
 
+nav {
+  margin: 1rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 h2 {
   font-size: 5em;
   text-align: center;
-  color: #222;
+  color: #f3f4f4;
 }
 
-img {
+nav a {
+  font-size: 1.25rem;
   margin: 1rem;
+  font-style: italic;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: #f3f4f4;
+}
+
+.wrapper {
+  margin: 0 auto;
+  width: 80vw;
 }
 
 .jumbo-wrapper {
-  padding: 2rem;
-  background: #f3f4f4;
+  padding: 2rem 1rem;
 }

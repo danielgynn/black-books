@@ -1,15 +1,24 @@
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import logo from './images/blackbooks.png';
+import Home from './pages/Home';
+import Library from './pages/Library';
 
 class App extends Component {
   render() {
     return (
-      <div>
-        <img src={logo} alt="logo" />
-        <div className="jumbo-wrapper">
-          <h2>Welcome to Black Books</h2>
+      <Router>
+        <div>
+          <nav>
+            <Link to="/"><img src={logo} alt="logo" /></Link>
+            <div>
+              <Link to="/library">Library</Link>
+            </div>
+          </nav>
+          <Route exact path="/" component={Home} />
+          <Route path="/library" component={Library} />
         </div>
-      </div>
+      </Router>
     );
   }
 }
