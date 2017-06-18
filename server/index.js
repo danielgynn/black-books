@@ -1,12 +1,15 @@
 'use strict';
 
 var express = require('express');
+var mongoose = require('mongoose');
 var bodyParser = require('body-parser');
 
 var app = express();
 var router = express.Router();
 
 var port = process.env.PORT || 9000;
+
+mongoose.connect('mongodb://danielgynn:secret@ds129422.mlab.com:29422/black-books');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
